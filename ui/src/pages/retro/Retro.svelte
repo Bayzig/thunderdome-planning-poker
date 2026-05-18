@@ -783,16 +783,16 @@
               <FeatureSubscribeBanner salesPitch="Review open action items from previous team retrospectives." />
             {/if}
             <h2 class="md:mt-14 lg:mt-20 text-3xl md:text-4xl lg:text-5xl font-rajdhani mb-2 tracking-wide">
-              The Prime Directive
+              Основная директива
             </h2>
             <div class="title-line bg-yellow-thunder"></div>
             <p class="md:leading-loose tracking-wider text-xl md:text-2xl lg:text-3xl">
-              "Regardless of what we discover, we understand and truly believe that everyone did the best job they
-              could, given what they knew at the time, their skills and abilities, the resources available, and the
-              situation at hand."
+              «Что бы мы ни обнаружили, мы понимаем и искренне верим, что каждый сделал всё возможное, 
+              учитывая свои знания на тот момент, навыки и способности, доступные ресурсы и сложившиеся 
+              обстоятельства.»
             </p>
             <p class="tracking-wider md:text-lg lg:text-xl">
-              &mdash;Norm Kerth, Project Retrospectives: A Handbook for Team Review <a
+              &mdash;Норм Керт, «Ретроспективы проектов: Руководство по командному обзору» <a
                 href="https://retrospectivewiki.org/index.php?title=The_Prime_Directive"
                 target="_blank"
                 class="text-blue-500 hover:text-blue-800 dark:text-sky-400 dark:hover:text-sky-600"

@@ -120,7 +120,7 @@
         updateActiveUserCount();
         const joinedUser = storyboard.users.find(w => w.id === parsedEvent.userId);
         if (joinedUser) {
-          notifications.success(`${joinedUser.name} joined.`);
+          notifications.success(`${joinedUser.name} присоединился.`);
         }
         break;
       case 'user_left':
@@ -128,7 +128,7 @@
         storyboard.users = JSON.parse(parsedEvent.value);
         updateActiveUserCount();
         if (leftUser) {
-          notifications.danger(`${leftUser.name} left.`);
+          notifications.danger(`${leftUser.name} вышел.`);
         }
         break;
       case 'storyboard_updated':
@@ -488,7 +488,7 @@
             onclick={decreaseScale}
             disabled={scale <= ZOOM_MIN}
             class="p-2 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-600 disabled:cursor-not-allowed disabled:hover:bg-transparent dark:disabled:hover:bg-transparent text-gray-800 dark:text-gray-100 disabled:text-gray-500 dark:disabled:text-gray-400"
-            title="Zoom Storyboard out"
+            title="Уменьшить масштаб доски"
           >
             <MinusIcon class="w-4 h-4" />
           </button>
@@ -496,12 +496,12 @@
             onclick={increaseScale}
             disabled={scale >= ZOOM_MAX}
             class="p-2 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-600 disabled:cursor-not-allowed disabled:hover:bg-transparent dark:disabled:hover:bg-transparent text-gray-800 dark:text-gray-100 disabled:text-gray-500 dark:disabled:text-gray-400"
-            title="Zoom Storyboard in"
+            title="Увеличить масштаб доски"
           >
             <PlusIcon class="w-4 h-4" />
           </button>
           <div class="w-px h-6 bg-gray-300 dark:bg-gray-600"></div>
-          <span class="sr-only">Zoom Board</span>
+          <span class="sr-only">Масштаб доски</span>
           <div class="px-1 flex items-center text-gray-600 dark:text-gray-400">
             <LayoutDashboardIcon class="w-6 h-6" />
           </div>
@@ -510,7 +510,7 @@
         <SolidButton color="green" onClick={() => toggleAddGoal(undefined)()} testid="goal-add">
           <Plus class="inline-block w-4 h-4" />&nbsp;{$LL.storyboardAddGoal()}
         </SolidButton>
-        <SubMenu label="Storyboard Settings" icon={Settings} testId="storyboard-settings">
+        <SubMenu label="Настройки доски" icon={Settings} testId="storyboard-settings">
           {#snippet children({ toggleSubmenu })}
             <SubMenuItem
               onClickHandler={togglePersonas(toggleSubmenu)}
@@ -588,10 +588,9 @@
       <div class="mx-auto h-24 w-24 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-6">
         <GoalIcon class="h-12 w-12 text-slate-400" />
       </div>
-      <p class="text-xl text-slate-600 dark:text-slate-400 mb-2">No goals created yet.</p>
+      <p class="text-xl text-slate-600 dark:text-slate-400 mb-2">Цели пока не созданы.</p>
       <p class="text-sm text-slate-500 dark:text-slate-500 max-w-2xl mx-auto">
-        Story mapping goals are the big outcomes or user journeys you want to achieve. Each goal becomes a section where
-        you organize stories into columns to map how work supports that outcome.
+        Цели Story Mapping — это большие результаты или пользовательские сценарии, которых вы хотите достичь. Каждая цель становится разделом, где вы организуете истории в колонки, чтобы показать, как работа поддерживает этот результат.
       </p>
       <div class="mt-6 flex justify-center">
         <SolidButton color="green" onClick={() => toggleAddGoal(undefined)()} testid="goal-add-empty">
@@ -620,10 +619,9 @@
           >
             <KanbanIcon class="h-12 w-12 text-slate-400" />
           </div>
-          <p class="text-xl text-slate-600 dark:text-slate-400 mb-2">No columns created yet.</p>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-2">Колонки пока не созданы.</p>
           <p class="text-sm text-slate-500 dark:text-slate-500 max-w-2xl mx-auto">
-            Columns help you organize the stories for this goal. You can create columns for different stages of work,
-            different types of work, or however else you'd like to group your stories.
+            Колонки помогают организовать истории для этой цели. Вы можете создать колонки для разных этапов работы, разных типов работы или любым другим способом группировки историй.
           </p>
           <div class="mt-6 flex justify-center">
             <SolidButton color="green" onClick={() => addColumn(goal.id)} testid="goal-col-add-empty">
@@ -703,8 +701,8 @@
   <DeleteConfirmation
     toggleDelete={toggleDeleteStoryboard()}
     handleDelete={concedeStoryboard}
-    confirmText={'Are you sure you want to delete this Storyboard?'}
-    confirmBtnText={'Delete Storyboard'}
+    confirmText={'Вы уверены, что хотите удалить эту доску?'}
+    confirmBtnText={'Удалить доску'}
   />
 {/if}
 
