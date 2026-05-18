@@ -17,14 +17,14 @@
   const { ShowActiveCountries, PathPrefix, RepoURL } = AppConfig;
 
   const slogans = [
-    'Empower Your Agile Teams',
-    'Release the Thunder in Your Agile Process',
-    'Storm Through Your Teams Sprints',
-    'Electrifying Your Agile Experience',
-    'The Arena Where Agile Teams Excel',
-    'Bringing the Energy Back to Agile',
-    'Harness the Storm, Master the Sprint',
-    'Amplify Your Teams Agile Potential',
+    'Расширьте возможности ваших Agile-команд',
+    'Высвободите силу грома в вашем Agile-процессе',
+    'Пронеситесь штормом через спринты вашей команды',
+    'Наэлектризуйте ваш Agile-опыт',
+    'Арена, где Agile-команды достигают совершенства',
+    'Возвращаем энергию в Agile',
+    'Обуздайте шторм, освойте спринт',
+    'Усильте Agile-потенциал вашей команды',
   ];
 
   let randomSlogan = $derived(slogans[Math.floor(Math.random() * slogans.length)]);
@@ -47,8 +47,7 @@
           {randomSlogan}
         </h1>
         <p class="max-w-4xl mx-auto text-xl sm:text-2xl text-blue-100 mb-8">
-          Transform your agile ceremonies from time-wasters into team-builders. Get the tools that make planning poker,
-          retrospectives, and story mapping actually work for remote and in-person teams.
+          Превратите ваши agile-церемонии из пустой траты времени в инструменты для построения команды. Получите инструменты, которые действительно работают для удаленных и офисных команд в planning poker, ретроспективах и story mapping.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
           {#if $user.id}
@@ -56,21 +55,21 @@
               href={appRoutes.games}
               class="bg-white text-indigo-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg"
             >
-              Start Planning
+              Начать планирование
             </a>
           {:else}
             <a
               href={appRoutes.register}
               class="bg-white text-indigo-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg"
             >
-              Get Started Free
+              Начать бесплатно
             </a>
           {/if}
           <a
             href="#features"
             class="bg-transparent text-white hover:bg-white/10 border border-white font-semibold py-3 px-8 rounded-full transition duration-300"
           >
-            Explore Features
+            Изучить возможности
           </a>
         </div>
       </div>
@@ -83,29 +82,23 @@
         <div class="md:w-1/2 md:pe-8 mb-8 md:mb-0">
           <div class="title-line bg-yellow-thunder"></div>
           <h2 class="text-4xl font-semibold font-rajdhani uppercase dark:text-white mb-6">
-            Planning Poker That Gets Consensus
+            Planning Poker, который достигает консенсуса
           </h2>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
-            Stop letting the loudest voice win your estimations. Get accurate story points from your whole team with
-            bias-free voting.
+            Перестаньте позволять самому громкому голосу побеждать в ваших оценках. Получайте точные story points от всей команды с помощью беспристрастного голосования.
           </p>
           <ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-8">
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span><strong>Eliminate estimation bias:</strong> Anonymous voting prevents anchoring and groupthink</span
-              >
+              <span><strong>Устраните предвзятость оценок:</strong> Анонимное голосование предотвращает эффект якоря и групповое мышление</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Flexible scales:</strong> Use Fibonacci, T-shirt sizes, or create custom ranges that fit your workflow</span
-              >
+              <span><strong>Гибкие шкалы:</strong> Используйте Фибоначчи, размеры футболок или создайте собственные диапазоны, подходящие вашему рабочему процессу</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Remote-first design:</strong> Equal participation whether you're in-person or distributed</span
-              >
+              <span><strong>Дизайн для удаленной работы:</strong> Равное участие независимо от того, находитесь вы в офисе или работаете распределенно</span>
             </li>
           </ul>
           <a
@@ -115,7 +108,7 @@
             <span
               class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
             >
-              {$user.id ? $LL.battleCreate() : 'Try Planning Poker'}
+              {$user.id ? $LL.battleCreate() : 'Попробовать Planning Poker'}
             </span>
           </a>
         </div>
@@ -143,30 +136,23 @@
         <div class="md:w-1/2 md:ps-8 mb-8 md:mb-0">
           <div class="title-line bg-yellow-thunder"></div>
           <h2 class="text-4xl font-semibold font-rajdhani uppercase dark:text-white mb-6">
-            Retrospectives That Drive Change
+            Ретроспективы, которые приводят к изменениям
           </h2>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
-            Move beyond the same old "what went well" discussions. Create psychological safety where real improvements
-            happen.
+            Выйдите за рамки привычных обсуждений "что прошло хорошо". Создайте психологическую безопасность, где происходят реальные улучшения.
           </p>
           <ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-8">
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Battle-tested formats:</strong> Start/Stop/Continue, 4Ls, Mad/Sad/Glad, plus custom templates</span
-              >
+              <span><strong>Проверенные форматы:</strong> Start/Stop/Continue, 4L, Mad/Sad/Glad, плюс пользовательские шаблоны</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Safe space for honesty:</strong> Anonymous feedback removes fear of judgment or retaliation</span
-              >
+              <span><strong>Безопасное пространство для честности:</strong> Анонимная обратная связь устраняет страх осуждения или возмездия</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Accountability that works:</strong> Convert insights into trackable action items with follow-through</span
-              >
+              <span><strong>Работающая подотчетность:</strong> Превращайте инсайты в отслеживаемые пункты действий с последующим контролем</span>
             </li>
           </ul>
           <a
@@ -176,7 +162,7 @@
             <span
               class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
             >
-              {$user.id ? 'Start a Retrospective' : 'Try Retrospectives'}
+              {$user.id ? 'Начать ретроспективу' : 'Попробовать ретроспективы'}
             </span>
           </a>
         </div>
@@ -185,12 +171,12 @@
             <img
               class="rounded-b-lg hidden dark:block"
               src="{PathPrefix}/img/previews/retro_20250812_dark.png"
-              alt="Sprint Retrospectives Preview"
+              alt="Превью спринт-ретроспектив"
             />
             <img
               class="rounded-b-lg dark:hidden"
               src="{PathPrefix}/img/previews/retro_20250812_light.png"
-              alt="Sprint Retrospectives Preview"
+              alt="Превью спринт-ретроспектив"
             />
           </BrowserMock>
         </div>
@@ -204,33 +190,23 @@
         <div class="md:w-1/2 md:pe-8 mb-8 md:mb-0">
           <div class="title-line bg-yellow-thunder"></div>
           <h2 class="text-4xl font-semibold font-rajdhani uppercase dark:text-white mb-6">
-            Story Maps That Tell the Real Story
+            Story Maps, которые рассказывают настоящую историю
           </h2>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
-            Stop building features in isolation. Visualize the complete user journey and prioritize what actually
-            matters to your users.
+            Перестаньте создавать функции изолированно. Визуализируйте полный путь пользователя и расставляйте приоритеты в том, что действительно важно для ваших пользователей.
           </p>
           <ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-8">
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Intuitive drag-and-drop:</strong> Reorganize stories as easily as moving sticky notes across your
-                map.</span
-              >
+              <span><strong>Интуитивное перетаскивание:</strong> Реорганизуйте истории так же легко, как перемещаете стикеры по карте.</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Flexible story organization:</strong> Structure work with goals, columns, personas, and visual cues
-                that fit your team's workflow.</span
-              >
+              <span><strong>Гибкая организация историй:</strong> Структурируйте работу с помощью целей, столбцов, персон и визуальных подсказок, которые подходят рабочему процессу вашей команды.</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Rich story details:</strong> Keep descriptions, acceptance criteria, and estimates together where
-                the whole team can see them.</span
-              >
+              <span><strong>Подробные детали историй:</strong> Храните описания, критерии приемки и оценки вместе, где вся команда может их видеть.</span>
             </li>
           </ul>
           <a
@@ -240,7 +216,7 @@
             <span
               class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
             >
-              {$user.id ? 'Create Story Map' : 'Try Story Mapping'}
+              {$user.id ? 'Создать Story Map' : 'Попробовать Story Mapping'}
             </span>
           </a>
         </div>
@@ -249,12 +225,12 @@
             <img
               class="rounded-b-lg hidden dark:block"
               src="{PathPrefix}/img/previews/storyboard_20250812_dark.png"
-              alt="Story Mapping Preview"
+              alt="Превью Story Mapping"
             />
             <img
               class="rounded-b-lg dark:hidden"
               src="{PathPrefix}/img/previews/storyboard_20250812_light.png"
-              alt="Story Mapping Preview"
+              alt="Превью Story Mapping"
             />
           </BrowserMock>
         </div>
@@ -267,31 +243,22 @@
       <div class="flex flex-col md:flex-row-reverse items-center justify-between">
         <div class="md:w-1/2 md:ps-8 mb-8 md:mb-0">
           <div class="title-line bg-yellow-thunder"></div>
-          <h2 class="text-4xl font-semibold font-rajdhani uppercase dark:text-white mb-6">Team Checkins</h2>
+          <h2 class="text-4xl font-semibold font-rajdhani uppercase dark:text-white mb-6">Командные отметки</h2>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Skip the status updates everyone already knows. Focus your daily standups on blockers, dependencies, and
-            what actually needs team discussion.
+            Пропустите обновления статуса, которые все уже знают. Сосредоточьте ваши ежедневные стендапы на блокерах, зависимостях и том, что действительно требует обсуждения команды.
           </p>
           <ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-8">
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Real-time team alignment:</strong> Live collaboration keeps distributed product teams in sync</span
-              >
+              <span><strong>Синхронизация команды в реальном времени:</strong> Живая совместная работа поддерживает синхронизацию распределенных продуктовых команд</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Surface blockers fast:</strong> Highlight blockers and discussion items so the team can focus on
-                what actually needs attention</span
-              >
+              <span><strong>Быстрое выявление блокеров:</strong> Выделяйте блокеры и темы для обсуждения, чтобы команда могла сосредоточиться на том, что действительно требует внимания</span>
             </li>
             <li class="flex items-start">
               <span class="text-indigo-500 dark:text-indigo-400 me-2">✓</span>
-              <span
-                ><strong>Comment directly on checkins:</strong> Team members can add context, questions, and follow-up notes
-                without derailing the standup</span
-              >
+              <span><strong>Комментируйте отметки напрямую:</strong> Члены команды могут добавлять контекст, вопросы и заметки для последующих действий, не сбивая стендап с курса</span>
             </li>
           </ul>
         </div>
@@ -299,12 +266,12 @@
           <img
             class="rounded-lg shadow-lg hidden dark:block max-w-lg mx-auto"
             src="{PathPrefix}/img/previews/team_checkins_dark_2025_09_24.png"
-            alt="Team Checkins Preview"
+            alt="Превью командных отметок"
           />
           <img
             class="rounded-lg shadow-lg dark:hidden max-w-lg mx-auto"
             src="{PathPrefix}/img/previews/team_checkins_light_2025_09_24.png"
-            alt="Team Checkins Preview"
+            alt="Превью командных отметок"
           />
         </div>
       </div>
@@ -313,46 +280,44 @@
 
   <section class="bg-indigo-600 text-white py-20">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-6 font-rajdhani uppercase">Why Choose Thunderdome?</h2>
+      <h2 class="text-4xl font-bold mb-6 font-rajdhani uppercase">Почему выбрать Thunderdome?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 text-gray-800 dark:text-white">
           <div class="text-indigo-500 text-4xl mb-4">
             <Zap class="h-12 w-12 mx-auto" />
           </div>
-          <h3 class="text-xl font-semibold mb-2">Built for Remote Teams</h3>
+          <h3 class="text-xl font-semibold mb-2">Создан для удаленных команд</h3>
           <p>
-            Every feature works seamlessly whether your team is in the same room or spread across continents. No more
-            "remote-friendly" compromises.
+            Каждая функция работает безупречно независимо от того, находится ли ваша команда в одной комнате или разбросана по континентам. Никаких компромиссов "дружественных к удаленной работе".
           </p>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 text-gray-800 dark:text-white">
           <div class="text-indigo-500 text-4xl mb-4">
             <Users class="h-12 w-12 mx-auto" />
           </div>
-          <h3 class="text-xl font-semibold mb-2">Psychological Safety First</h3>
+          <h3 class="text-xl font-semibold mb-2">Психологическая безопасность прежде всего</h3>
           <p>
-            Anonymous options, inclusive facilitation, and bias reduction tools help every team member contribute their
-            best thinking.
+            Анонимные опции, инклюзивная фасилитация и инструменты снижения предвзятости помогают каждому члену команды вносить свои лучшие идеи.
           </p>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 text-gray-800 dark:text-white">
           <div class="text-indigo-500 text-4xl mb-4">
             <Github class="h-12 w-12 mx-auto" />
           </div>
-          <h3 class="text-xl font-semibold mb-2">Open Source</h3>
+          <h3 class="text-xl font-semibold mb-2">Открытый исходный код</h3>
           <p>
             <a
               href={appRoutes.subscriptionPricing}
               class="text-indigo-400 dark:text-indigo-300 hover:text-yellow-thunder dark:hover:text-yellow-thunder font-bold"
-              >Premium cloud-hosted</a
+              >Премиум облачный хостинг</a
             >
-            convenience or
+            для удобства или
             <a
               href="{RepoURL}/blob/main/docs/INSTALLATION.md"
               target="_blank"
               class="text-indigo-400 dark:text-indigo-300 hover:text-yellow-thunder dark:hover:text-yellow-thunder font-bold"
-              >self-hosted</a
-            > sovereignty. The choice is entirely yours.
+              >самостоятельный хостинг</a
+            > для суверенитета. Выбор полностью за вами.
           </p>
         </div>
       </div>
