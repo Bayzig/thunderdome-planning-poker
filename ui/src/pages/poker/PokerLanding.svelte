@@ -9,103 +9,103 @@
   onMount(() => window.scrollTo(0, 0));
 
   const heroData = {
-    title: `Turn Estimation Chaos into Team Consensus with <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-thunder to-orange-500">Thunderdome</span> Planning Poker`,
+    title: `Превратите хаос оценки в командный консенсус с <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-thunder to-orange-500">Thunderdome</span> Planning Poker`,
     subtitle:
-      'Transform wild guesses and estimation bias into data-driven story points. Build accurate backlogs that help your team plan realistic sprints.',
-    primaryCta: 'Start Estimating Smart',
-    secondaryCta: 'See How It Works',
+      'Трансформируйте необоснованные догадки и предвзятость оценок в стори-поинты, основанные на данных. Создавайте точные бэклоги, которые помогут вашей команде планировать реалистичные спринты.',
+    primaryCta: 'Начать умную оценку',
+    secondaryCta: 'Посмотреть, как это работает',
   };
 
   const problemSolutionData = {
-    title: 'Why Traditional Estimation Fails Teams',
-    subtitle: 'Move from wild guesses and endless debates to data-driven consensus that actually works.',
-    problemTitle: 'Traditional Estimation Problems',
+    title: 'Почему традиционная оценка подводит команды',
+    subtitle: 'Переходите от необоснованных догадок и бесконечных споров к консенсусу на основе данных, который действительно работает.',
+    problemTitle: 'Проблемы традиционной оценки',
     problemItems: [
-      'Loudest voice wins the estimate',
-      'Anchoring bias skews all estimates',
-      'Unrealistic commitments lead to burnout',
-      'Team members afraid to disagree',
+      'Побеждает оценка самого громкого голоса',
+      'Эффект якоря искажает все оценки',
+      'Нереалистичные обязательства ведут к выгоранию',
+      'Члены команды боятся не соглашаться',
     ],
-    solutionTitle: 'With Thunderdome Planning Poker',
+    solutionTitle: 'С Thunderdome Planning Poker',
     solutionItems: [
-      "Every team member's input counts equally",
-      'Independent thinking before consensus',
-      'Realistic estimates based on team wisdom',
-      'Safe space for honest complexity assessment',
+      'Мнение каждого члена команды учитывается одинаково',
+      'Независимое мышление перед консенсусом',
+      'Реалистичные оценки на основе коллективной мудрости команды',
+      'Безопасное пространство для честной оценки сложности',
     ],
     conclusion:
-      '<strong>The result?</strong> Accurate story points that help your team make realistic sprint commitments and improve velocity predictions over time.',
+      '<strong>Результат?</strong> Точные стори-поинты, которые помогают вашей команде делать реалистичные обязательства по спринтам и улучшать прогнозы скорости со временем.',
   };
 
   const features = [
     {
-      title: 'Scales That Match Your Reality',
+      title: 'Шкалы, соответствующие вашей реальности',
       description:
-        "Stop forcing your team into estimation scales that don't fit. Use proven scales or create your own that reflect how your team actually thinks about work.",
+        'Перестаньте заставлять команду использовать шкалы оценки, которые не подходят. Используйте проверенные шкалы или создайте свои собственные, отражающие то, как ваша команда на самом деле думает о работе.',
       features: [
-        '<strong>Classic scales ready to go:</strong> Fibonacci, T-shirt sizes, and other proven estimation approaches',
-        "<strong>Build custom scales:</strong> Create estimation ranges that match your team's workflow and complexity levels",
-        '<strong>Special situation cards:</strong> Handle unknowns with "?" cards or infinite complexity with "∞" options',
-        '<strong>Switch scales easily:</strong> Use different approaches for different project types or team preferences',
+        '<strong>Классические шкалы готовы к использованию:</strong> Фибоначчи, размеры футболок и другие проверенные подходы к оценке',
+        '<strong>Создавайте пользовательские шкалы:</strong> Создавайте диапазоны оценок, соответствующие рабочему процессу и уровням сложности вашей команды',
+        '<strong>Карты для особых ситуаций:</strong> Обрабатывайте неизвестное с помощью карт "?" или бесконечную сложность с опциями "∞"',
+        '<strong>Легко переключайте шкалы:</strong> Используйте разные подходы для разных типов проектов или предпочтений команды',
       ],
       imageDark: '/img/previews/estimation_scales_20250812_dark.png',
       imageLight: '/img/previews/estimation_scales_20250812_light.png',
-      imageAlt: 'Customizable estimation scales including Fibonacci and custom options',
+      imageAlt: 'Настраиваемые шкалы оценки, включая Фибоначчи и пользовательские опции',
     },
     {
-      title: 'Estimate Together, Anywhere',
+      title: 'Оценивайте вместе, откуда угодно',
       description:
-        'Whether your team is in the same room or spread across time zones, everyone participates equally in the estimation process.',
+        'Независимо от того, находится ли ваша команда в одной комнате или разбросана по часовым поясам, все участвуют в процессе оценки на равных.',
       features: [
-        "<strong>Real-time synchronization:</strong> See who's voted and when, with instant updates across all devices",
-        '<strong>Seamless remote participation:</strong> No difference between in-person and distributed team members',
-        '<strong>Multi-user sessions:</strong> Handle large teams without technical hiccups or coordination issues',
+        '<strong>Синхронизация в реальном времени:</strong> Видите, кто проголосовал и когда, с мгновенными обновлениями на всех устройствах',
+        '<strong>Бесшовное удаленное участие:</strong> Нет разницы между присутствующими лично и распределенными членами команды',
+        '<strong>Многопользовательские сессии:</strong> Работайте с большими командами без технических сбоев или проблем с координацией',
       ],
       imageDark: '/img/previews/poker_players_20250812_dark.png',
       imageLight: '/img/previews/poker_players_20250812_light.png',
-      imageAlt: 'Real-time collaborative planning poker session',
+      imageAlt: 'Совместная сессия Planning Poker в реальном времени',
     },
     {
-      title: 'Unbiased Estimation Made Easy',
+      title: 'Беспристрастная оценка стала простой',
       description:
-        'Eliminate estimation bias and anchoring effects. Get the true wisdom of your team, not just the opinion of whoever speaks first.',
+        'Устраните предвзятость оценки и эффекты якоря. Получите истинную мудрость вашей команды, а не только мнение того, кто говорит первым.',
       features: [
-        '<strong>Anonymous voting options:</strong> Remove personality and hierarchy bias from the estimation process',
-        "<strong>Simultaneous reveals:</strong> Everyone thinks independently before seeing others' estimates",
-        '<strong>Outlier identification:</strong> Quickly spot estimation differences that need discussion and alignment',
+        '<strong>Опции анонимного голосования:</strong> Устраните предвзятость личности и иерархии из процесса оценки',
+        '<strong>Одновременное раскрытие:</strong> Все думают независимо, прежде чем увидеть оценки других',
+        '<strong>Выявление выбросов:</strong> Быстро обнаруживайте различия в оценках, которые требуют обсуждения и согласования',
       ],
       imageDark: '/img/previews/voting_anon.png',
       imageLight: '/img/previews/voting_anon_light.png',
-      imageAlt: 'Anonymous voting interface showing unbiased estimation process',
+      imageAlt: 'Интерфейс анонимного голосования, показывающий процесс беспристрастной оценки',
     },
   ];
 
   const benefitsData = {
-    title: 'Build Accurate Story Points Your Team Can Trust',
+    title: 'Создавайте точные стори-поинты, которым ваша команда может доверять',
     description:
-      'Teams using Thunderdome Planning Poker report more consistent story pointing, better velocity tracking, and improved sprint planning confidence.',
+      'Команды, использующие Thunderdome Planning Poker, сообщают о более последовательной оценке стори-поинтов, лучшем отслеживании скорости и повышении уверенности в планировании спринтов.',
     benefits: [
       {
-        title: 'Story Point Accuracy',
-        description: 'Leverage collective team intelligence for more reliable and consistent story point estimates',
+        title: 'Точность стори-поинтов',
+        description: 'Используйте коллективный интеллект команды для более надежных и последовательных оценок стори-поинтов',
       },
       {
-        title: 'Team Consensus',
-        description: 'Build shared understanding of story complexity and effort before pointing stories',
+        title: 'Командный консенсус',
+        description: 'Создавайте общее понимание сложности и усилий по историям перед их оценкой',
       },
       {
-        title: 'Velocity Tracking',
-        description: 'Improve sprint planning with consistent story points that reflect true team capacity',
+        title: 'Отслеживание скорости',
+        description: 'Улучшайте планирование спринтов с помощью последовательных стори-поинтов, отражающих реальную мощность команды',
       },
     ],
   };
 
   const finalCtaData = {
-    title: 'Ready to Point Stories Like a Pro?',
+    title: 'Готовы оценивать истории как профессионал?',
     description:
-      "Stop guessing story complexity and start measuring it accurately. Build consistent story points that improve your team's velocity tracking and sprint planning.",
-    primaryCta: 'Start Pointing Stories',
-    secondaryCta: 'Sign In to Continue',
+      'Перестаньте угадывать сложность историй и начните точно её измерять. Создавайте последовательные стори-поинты, которые улучшают отслеживание скорости вашей команды и планирование спринтов.',
+    primaryCta: 'Начать оценку историй',
+    secondaryCta: 'Войти, чтобы продолжить',
   };
 </script>
 
