@@ -139,7 +139,7 @@
   const updateLink = (evt: Event) => {
     const link = (evt.target as HTMLInputElement).value;
     if (link !== '' && !isAbsolute.test(link)) {
-      notifications.danger('Link must be an absolute URL');
+      notifications.danger('Ссылка должна быть абсолютным URL');
       return;
     }
 
@@ -201,7 +201,7 @@
       <!-- Story Name (Full Width) -->
       <div>
         <label for="storyName" class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">
-          Story Name <span class="text-red-500">*</span>
+          Название истории <span class="text-red-500">*</span>
         </label>
         <!-- <input 
                   type="text" 
@@ -214,7 +214,7 @@
           id="storyName"
           onchange={updateName}
           value={story.name}
-          placeholder="e.g. User Authentication System"
+          placeholder="например, Система аутентификации пользователей"
           name="storyName"
           bind:this={focusInput}
         />
@@ -222,14 +222,14 @@
 
       <!-- Story Points and Color -->
       <div>
-        <div class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">Story Color</div>
+        <div class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">Цвет истории</div>
         <StoryColorSelector bind:value={selectedStoryColor} {colorLegend} onSelect={color => changeColor(color)()} />
       </div>
 
       <!-- Story Content -->
       <div>
         <label for="story-content" class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">
-          Story Description
+          Описание истории
         </label>
         <div class="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
           <!-- <textarea 
@@ -241,7 +241,7 @@
           <div class="bg-white">
             <Editor
               content={story.content}
-              placeholder="Enter story content"
+              placeholder="Введите содержание истории"
               id="storyDescription"
               handleTextChange={(c: string) => {
                 updateContent(c);
@@ -274,13 +274,13 @@
               <ChevronDown class="w-4 h-4" />
             {/if}
           </span>
-          <span class="font-medium text-gray-900 dark:text-white">Additional Details</span>
+          <span class="font-medium text-gray-900 dark:text-white">Дополнительные детали</span>
         </button>
 
         <div id="more-actions-content" class="flex flex-col gap-2 {additionalDetailsHidden ? 'hidden' : ''}">
           <!-- Story Points -->
           <div>
-            <label for="storyPoints" class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">Story Points</label>
+            <label for="storyPoints" class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">Стори-поинты</label>
             <input
               class="bg-gray-100 dark:bg-gray-900 dark:focus:bg-gray-800 border-gray-200 dark:border-gray-600 border-2 appearance-none
                         rounded w-full py-2 px-3 text-gray-700 dark:text-gray-400 leading-tight
@@ -289,7 +289,7 @@
               bind:value={storyPoints}
               onchange={updatePoints}
               maxlength={storyboardPointsMaxLength}
-              placeholder="Enter story points"
+              placeholder="Введите стори-поинты"
               name="storyPoints"
             />
           </div>
@@ -297,8 +297,8 @@
           <!-- Story Link -->
           <div>
             <label for="storyLink" class="block text-gray-700 dark:text-gray-300 mb-2 text-lg">
-              Story Link
-              <span class="text-gray-500 dark:text-gray-400 font-normal ms-1 text-lg">(Optional)</span>
+              Ссылка на историю
+              <span class="text-gray-500 dark:text-gray-400 font-normal ms-1 text-lg">(Необязательно)</span>
             </label>
             <div class="relative">
               <TextInput
@@ -329,15 +329,15 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Story Status-->
             <div>
-              <div class="text-gray-700 dark:text-gray-300 mb-3 text-lg">Story Status</div>
+              <div class="text-gray-700 dark:text-gray-300 mb-3 text-lg">Статус истории</div>
               {#if !story.closed}
                 <HollowButton color="orange" onClick={markClosed}>
                   <svg class="w-4 h-4 inline me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg> Mark as Closed
+                  </svg> Отметить как закрытую
                 </HollowButton>
               {:else}
-                <HollowButton color="green" onClick={markOpen}>Reopen story</HollowButton>
+                <HollowButton color="green" onClick={markOpen}>Открыть историю заново</HollowButton>
               {/if}
             </div>
 
@@ -352,7 +352,7 @@
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.966-.833-2.736 0L3.478 16.5c-.77.833.192 2.5 1.732 2.5z"
                   ></path>
                 </svg>
-                Danger Zone
+                Опасная зона
               </h4>
               <div class="flex space-x-3">
                 <HollowButton color="red" onClick={handleStoryDelete}>
@@ -363,7 +363,7 @@
                       stroke-width="2"
                       d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1-1H8a1 1 0 00-1 1v3M4 7h16"
                     ></path>
-                  </svg> Delete Story
+                  </svg> Удалить историю
                 </HollowButton>
               </div>
             </div>
@@ -391,7 +391,7 @@
               {/each}
             </div>
           {:else}
-            <CommentEmptyState description="Be the first to share your thoughts on this story." />
+            <CommentEmptyState description="Будьте первым, кто поделится мыслями об этой истории." />
           {/if}
 
           <CommentForm onSubmit={handleCommentSubmit} />
