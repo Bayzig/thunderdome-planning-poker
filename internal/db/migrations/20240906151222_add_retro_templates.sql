@@ -30,63 +30,63 @@ INSERT INTO thunderdome.retro_template (id, name, code, description, format, is_
 VALUES
 (
     '5c3b4783-82cb-45a4-ac7b-c956c6b4047e', -- hardcoded UUID for the default template
-    'Worked/Improvements/Questions',
+    'Хорошо/Требует улучшения/Вопросы',
     'worked_improve_question',
-    'Reflect on what worked, what needs improvement, and what questions you have',
+    'Подумайте о том, что прошло хорошо, что требует улучшения и какие вопросы у вас возникли',
     '{"columns": [
-                {"name": "worked", "label": "What worked well", "color": "green", "icon": "smiley"},
-                {"name": "improve", "label": "What needs improvement", "color": "red", "icon": "frown"},
-                {"name": "question", "label": "I want to ask", "color": "blue", "icon": "question"}
+                {"name": "worked", "label": "Что сработало", "color": "green", "icon": "smiley"},
+                {"name": "improve", "label": "Что требует улучшения", "color": "red", "icon": "frown"},
+                {"name": "question", "label": "Я хочу спросить", "color": "blue", "icon": "question"}
         ]}',
     true
 ),
 (
     gen_random_uuid(),
-    'Start/Stop/Continue',
+    'Начать/Прекратить/Продолжить',
     'start_stop_continue',
-    'Reflect on what to start doing, stop doing, and continue doing',
+    'Обдумайте, что начать делать, что прекратить и что продолжить',
     '{"columns": [
-            {"name": "start", "label": "Start", "color": "green"},
-            {"name": "stop", "label": "Stop", "color": "red"},
-            {"name": "continue", "label": "Continue", "color": "blue"}
+            {"name": "start", "label": "Начать", "color": "green"},
+            {"name": "stop", "label": "Прекратить", "color": "red"},
+            {"name": "continue", "label": "Продолжить", "color": "blue"}
     ]}',
     true
 ),
 (
     gen_random_uuid(),
-    'Mad/Sad/Glad',
+    'Злит/Огорчает/Радует',
     'mad_sad_glad',
-    'Express feelings about the sprint: what made you mad, sad, or glad',
+    'Выразите свои чувства о спринте: что вас разозлило, огорчило или обрадовало',
     '{"columns": [
-                {"name": "mad", "label": "Mad", "color": "red", "icon": "angry"},
-                {"name": "sad", "label": "Sad", "color": "blue", "icon": "frown"},
-                {"name": "glad", "label": "Glad", "color": "green", "icon": "smiley"}
+                {"name": "mad", "label": "Злит", "color": "red", "icon": "angry"},
+                {"name": "sad", "label": "Огорчает", "color": "blue", "icon": "frown"},
+                {"name": "glad", "label": "Радует", "color": "green", "icon": "smiley"}
         ]}',
     true
 ),
 (
     gen_random_uuid(),
-    'Drop/Add/Keep/Improve',
+    'Отбросить/Добавить/Сохранить/Улучшить',
     'drop_add_keep_improve',
-    'Reflect on what to Drop, Add, Keep, and Improve in the next sprint',
+    'Подумайте, что отбросить, добавить, сохранить и улучшить в следующем спринте',
     '{"columns": [
-            {"name": "drop", "label": "Drop", "color": "red"},
-             {"name": "add", "label": "Add", "color": "green"},
-            {"name": "keep", "label": "Keep", "color": "blue"},
-            {"name": "improve", "label": "Improve", "color": "yellow"}
+            {"name": "drop", "label": "Отбросить", "color": "red"},
+             {"name": "add", "label": "Добавить", "color": "green"},
+            {"name": "keep", "label": "Сохранить", "color": "blue"},
+            {"name": "improve", "label": "Улучшить", "color": "yellow"}
     ]}',
     true
 ),
 (
     gen_random_uuid(),
-    'Liked/Learned/Lacked/Longed for',
+    'Понравилось/Узнал/Не хватило/Хотелось',
     'liked_learned_lacked_longed_for',
-    'Reflect on what was Liked, Learned, Lacked, and Longed for',
+    'Подумайте о том, что понравилось, что узнали, чего не хватило и чего хотелось',
     '{"columns": [
-            {"name": "liked", "label": "Liked", "color": "green"},
-             {"name": "learned", "label": "Learned", "color": "blue"},
-            {"name": "lacked", "label": "Lacked", "color": "red"},
-            {"name": "longedfor", "label": "Longed for", "color": "yellow"}
+            {"name": "liked", "label": "Понравилось", "color": "green"},
+             {"name": "learned", "label": "Узнал", "color": "blue"},
+            {"name": "lacked", "label": "Не хватило", "color": "red"},
+            {"name": "longedfor", "label": "Хотелось", "color": "yellow"}
     ]}',
     true
 );
