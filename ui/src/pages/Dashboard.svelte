@@ -310,7 +310,7 @@
           selectedRetroAction = currentId ? (retroActions.find(action => action.id === currentId) ?? null) : null;
         })
         .catch(function () {
-          notifications.danger('Failed to fetch retro action items.');
+          notifications.danger('Не удалось загрузить задачи из ретроспектив.');
         });
     } catch (error) {
       console.error('Error loading retro action items:', error);
@@ -731,9 +731,9 @@
                   </div>
                   <div>
                     <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
-                      Open action items assigned to you ({retroActionCount})
+                      Открытые задачи, назначенные вам ({retroActionCount})
                     </h2>
-                    <p class="text-slate-600 dark:text-slate-400">Outstanding commitments from your team retros</p>
+                    <p class="text-slate-600 dark:text-slate-400">Невыполненные обязательства из командных ретроспектив</p>
                   </div>
                 </div>
               </div>
@@ -751,7 +751,7 @@
                               <span
                                 class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-emerald-900 ring-1 ring-emerald-300 dark:bg-emerald-500/15 dark:text-emerald-200 dark:ring-emerald-400/30"
                               >
-                                {action.teamName || selectedTeam?.name || 'Team'}
+                                {action.teamName || selectedTeam?.name || 'Команда'}
                               </span>
                             </div>
                             <div class="flex items-center gap-2">
@@ -759,14 +759,14 @@
                                 type="button"
                                 class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:border-sky-700 dark:hover:bg-sky-950/40 dark:hover:text-sky-300"
                                 onclick={() => toggleRetroActionComments(action.id)}
-                                aria-label={`Open comments for action item: ${action.content}`}
+                                aria-label={`Открыть комментарии к задаче: ${action.content}`}
                               >
                                 <MessageSquareMore class="h-4 w-4" />
                                 <span>{action.comments.length}</span>
                               </button>
                               <ActionsMenu
                                 actions={getRetroActionMenuActions(action)}
-                                ariaLabel="Action item actions"
+                                ariaLabel="Действия с задачей"
                               />
                             </div>
                           </div>
@@ -786,8 +786,8 @@
                 >
                   <p class="text-lg font-semibold text-slate-900 dark:text-white">
                     {selectedTeam
-                      ? `No open action items are assigned to you in ${selectedTeam.name}.`
-                      : 'No open action items are assigned to you right now.'}
+                      ? `У вас нет открытых задач в команде ${selectedTeam.name}.`
+                      : 'У вас сейчас нет открытых задач.'}
                   </p>
                 </div>
               {/if}
