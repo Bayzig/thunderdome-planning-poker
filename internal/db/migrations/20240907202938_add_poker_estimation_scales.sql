@@ -109,11 +109,11 @@ EXECUTE FUNCTION ensure_single_default_scale();
 -- Insert default estimation scales
 INSERT INTO thunderdome.estimation_scale (name, description, scale_type, values, is_public, default_scale)
 VALUES
-('Thunderdome Default', 'Thunderdome default sequence for estimation', 'thunderdome_default'::thunderdome.estimation_scale_type, ARRAY['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '21', '34', '55', '100', '?', '☕️'], true, true),
-('Fibonacci', 'Standard Fibonacci sequence for estimation', 'fibonacci'::thunderdome.estimation_scale_type, ARRAY['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '?'], true, false),
-('Modified Fibonacci', 'Modified Fibonacci sequence for estimation', 'modified_fibonacci'::thunderdome.estimation_scale_type, ARRAY['0', '1', '2', '3', '5', '8', '13', '21', '40', '80', '100', '?'], true, false),
-('T-Shirt Sizes', 'T-shirt size scale for rough estimation', 't_shirt'::thunderdome.estimation_scale_type, ARRAY['XXS','XS', 'S', 'M', 'L', 'XL', 'XXL', '?'], true, false),
-('Powers of Two', 'Powers of two scale for exponential complexity', 'powers_of_two'::thunderdome.estimation_scale_type, ARRAY['1', '2', '4', '8', '16', '32', '64', '?'], true, false);
+('Thunderdome по умолчанию', 'Последовательность Thunderdome по умолчанию для оценки', 'thunderdome_default'::thunderdome.estimation_scale_type, ARRAY['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '21', '34', '55', '100', '?', '☕️'], true, true),
+('Фибоначчи', 'Стандартная последовательность Фибоначчи для оценки', 'fibonacci'::thunderdome.estimation_scale_type, ARRAY['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '?'], true, false),
+('Модифицированная Фибоначчи', 'Модифицированная последовательность Фибоначчи для оценки', 'modified_fibonacci'::thunderdome.estimation_scale_type, ARRAY['0', '1', '2', '3', '5', '8', '13', '21', '40', '80', '100', '?'], true, false),
+('Размеры футболок', 'Шкала размеров футболок для приблизительной оценки', 't_shirt'::thunderdome.estimation_scale_type, ARRAY['XXS','XS', 'S', 'M', 'L', 'XL', 'XXL', '?'], true, false),
+('Степени двойки', 'Степени двойки по шкале экспоненциальной сложности', 'powers_of_two'::thunderdome.estimation_scale_type, ARRAY['1', '2', '4', '8', '16', '32', '64', '?'], true, false);
 
 -- Update existing poker sessions to use the default Fibonacci scale
 -- and
