@@ -84,7 +84,7 @@
       </button>
       <div
         class="flex items-center justify-center w-9 h-9 bg-red-600 dark:bg-red-500 rounded-full shadow-md"
-        title="Goal"
+        title="Цель"
       >
         <GoalIcon class="w-6 h-6 text-white" />
       </div>
@@ -99,14 +99,14 @@
       {#if isFacilitator}
         {#if columnOrderEditMode}
           <SolidButton color="yellow" onClick={toggleColumnOrderEdit} testid="column-order-done">
-            <SendToBack class="inline-block w-4 h-4 me-1" />End Column Order Edit Mode
+            <SendToBack class="inline-block w-4 h-4 me-1" />Завершить редактирование порядка колонок
           </SolidButton>
         {:else}
           <SolidButton color="green" onClick={handleColAdd} testid="column-add">
             <Plus class="inline-block w-4 h-4" />&nbsp;{$LL.storyboardAddColumn()}
           </SolidButton>
 
-          <SubMenu label="Goal Settings" icon={Settings} testId="goal-settings">
+          <SubMenu label="Настройки цели" icon={Settings} testId="goal-settings">
             {#snippet children({ toggleSubmenu })}
               <SubMenuItem
                 onClickHandler={handleToggleEdit(toggleSubmenu)}
@@ -118,7 +118,7 @@
                 onClickHandler={handleToggleColumnOrderEdit(toggleSubmenu)}
                 testId="toggle-edit-goal-column-order"
                 icon={SendToBack}
-                label={`Edit Columns Order`}
+                label={`Изменить порядок колонок`}
               />
               <SubMenuItem
                 onClickHandler={toggleDeleteConfirmation(toggleSubmenu)}
@@ -142,8 +142,8 @@
     <DeleteConfirmation
       toggleDelete={toggleDeleteConfirmation()}
       handleDelete={handleDeletion}
-      confirmText={'Are you sure you want to delete this goal?'}
-      confirmBtnText={'Delete Goal'}
+      confirmText={'Вы уверены, что хотите удалить эту цель?'}
+      confirmBtnText={'Удалить цель'}
     />
   {/if}
 </div>

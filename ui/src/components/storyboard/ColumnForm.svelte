@@ -63,31 +63,31 @@
   <form onsubmit={handleSubmit} name="addColumn">
     <div class="mb-4">
       <label class="block text-sm text-gray-700 dark:text-gray-400 font-bold mb-2" for="columnName">
-        Column Name
+        Название колонки
       </label>
       <TextInput
         id="columnName"
         bind:value={columnName}
-        placeholder="Enter a column name"
+        placeholder="Введите название колонки"
         name="columnName"
         bind:this={focusInput}
       />
     </div>
     <div class="mb-4">
       <label class="block text-sm text-gray-700 dark:text-gray-400 font-bold mb-2" for="columnDefaultStoryColor">
-        Default Story Color
+        Цвет историй по умолчанию
       </label>
       <div id="columnDefaultStoryColor">
         <StoryColorSelector
           bind:value={selectedDefaultStoryColor}
           {colorLegend}
           allowNone={true}
-          noneLabel="No default"
+          noneLabel="Без умолчания"
         />
       </div>
     </div>
     <div class="flex justify-end gap-2">
-      <SolidButton type="submit">Save</SolidButton>
+      <SolidButton type="submit">Сохранить</SolidButton>
     </div>
   </form>
 </Modal>
