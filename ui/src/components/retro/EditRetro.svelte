@@ -172,7 +172,7 @@
         bind:checked={hideVotesDuringVoting}
         id="hideVotesDuringVoting"
         name="hideVotesDuringVoting"
-        label={`Hide Votes During Voting Phase`}
+        label={`Скрывать голоса во время голосования`}
       />
     </div>
 
