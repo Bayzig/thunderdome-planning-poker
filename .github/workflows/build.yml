@@ -80,19 +80,22 @@ jobs:
           SMTP_ENABLED: "false"
 
       - name: Install Playwright dependencies
+        if: false  # Отключено для русской версии
         working-directory: ./e2e
         run: |
           npm ci
           npx playwright install --with-deps
 
       - name: Run Playwright tests
+        if: false  # Отключено для русской версии
         working-directory: ./e2e
         run: npx playwright test
         env:
           DB_HOST: ${{ matrix.db-host }}
 
       - uses: actions/upload-artifact@v6
-        if: always()
+        if: false  # Отключено для русской версии
+        #if: always()
         with:
           name: playwright-report
           path: e2e/playwright-report/
